@@ -1,12 +1,14 @@
 import './App.css';
 import Navbar from './Components/Navbar';
-import Home from './Components/Home';
+import Move from './Components/Move';
+
+
 
 function App() {
   return (
     <>
     <Navbar/>
-    <Home/>
+    <Move/>
     </>
   );
 }
