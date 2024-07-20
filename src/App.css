@@ -6,3 +6,44 @@
     margin: 0;
     padding: 0;
 }
+
+.train{
+    
+    display: flex;
+    margin-top: 5rem;
+    /* position: relative; */
+    /* background-color: yellow; */
+    width: 100%;
+    justify-content: space-between;
+    height: 30rem;
+}
+.train-box{
+    /* position: fixed; */
+    width: 70%;
+    height: auto;
+    left: 0px;
+}
+
+.content-box{
+    position: relative;
+    top: 30%;
+    padding-top: 70px;
+    font-size: 80px;
+    font-weight: bolder;
+    width: 50%;
+}
+
+.content-1{
+    position: fixed;
+    right: 0;
+}
+.content-2{
+    position: fixed;
+    right: 0;
+}
+
+
+
+
+
+
