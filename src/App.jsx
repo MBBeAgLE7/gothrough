@@ -1,20 +1,13 @@
 import './App.css';
 import Navbar from './Components/Navbar';
-import Move from './Components/Move';
+import Hero from './Components/Hero';
 
 
 
 function App() {
   return (
     <>
-    <div className='train'>
-      <div>
-      <Move/>        
-      </div>
-      <div>
-
-      </div>
-    </div>
+    <Hero/>
     <Navbar/>
     </>
   );
