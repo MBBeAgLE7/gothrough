@@ -1,33 +1,29 @@
 import { useState, useRef, useEffect } from "react";
 
 export default function NavBar() {
-
-    let menuref = useRef()
+    let menuref = useRef();
     const [navbar, setNavbar] = useState(false);
 
     useEffect(() => {
         let handler = (e) => {
-            if (!menuref.current.contains(e.target)) {
-                setNavbar(false)
+            if (menuref.current && !menuref.current.contains(e.target)) {
+                setNavbar(false);
             }
-        }
+        };
 
-        document.addEventListener("mousedown", handler)
+        document.addEventListener("mousedown", handler);
 
         return () => {
-            document.removeEventListener("mousedown", handler)
-        }
-    })
-
+            document.removeEventListener("mousedown", handler);
+        };
+    }, []);
 
     return (
-        
         <nav className="w-full fixed top-0 bg-white shadow rounded-b-2xl">
-            
-            <div ref={menuref} className="justify-around p-2 mt-0 m-2 lg:flex lg:justify-between lg:items-center  md:flex md:items-center md:justify-between md:p-2">
+            <div ref={menuref} className="justify-around p-2 mt-0 m-2 lg:flex lg:justify-between lg:items-center md:flex md:items-center md:justify-between md:p-2">
                 <div>
                     <div className="flex items-center justify-between md:block">
-                        <a href="/" className="flex">
+                        <a href="/" className="flex items-center">
                             <span>
                                 <img src="/assets/image.png" alt="Logo" className="h-8 w-8 mr-2 rounded-md" />
                             </span>
@@ -72,10 +68,7 @@ export default function NavBar() {
                     </div>
                 </div>
                 <div>
-                    <div
-                        className={`flex-1 justify-self-center p-2 md:block md:p-2  ${navbar ? "block" : "hidden"
-                            }`}
-                    >
+                    <div className={`flex-1 justify-self-center p-2 md:block md:p-2 ${navbar ? "block" : "hidden"}`}>
                         <ul className="items-center justify-center space-y-4 md:flex md:space-x-6 md:space-y-0">
                             <li className="text-gray-600 font-semibold hover:text-blue-400">
                                 <a href="/">Home</a>
@@ -87,10 +80,10 @@ export default function NavBar() {
                                 <a href="/">Contact Us</a>
                             </li>
                             <li className="text-gray-600 font-semibold hover:text-blue-400">
-                                <a href="/">Sign Up </a>
+                                <a href="/">Sign Up</a>
                             </li>
                             <li className="text-gray-600 font-semibold hover:text-blue-400">
-                                <a href="/">Log In </a>
+                                <a href="/">Log In</a>
                             </li>
                         </ul>
                     </div>
