@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useRef} from "react";
 import { useLottie } from "lottie-react";
 import groovyWalkAnimation from "./groovyWalk.json";
+import About from "./About";
 
 const Move = () => {
+  const aboutRef = useRef(null)
   const options = {
     animationData: groovyWalkAnimation,
     loop: true
@@ -10,22 +12,31 @@ const Move = () => {
 
   const { View } = useLottie(options);
 
+  const handleGetStarted = () => {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
+
   return (
   <>
-  <div className="train m-2 p-2 flex justify-between items-center">
-    <div className="home-text text-6xl ml-8 text-wrap font-bold">
+  <div className="train m-2 p-2 flex justify-between mt-8">
+    <div className="home-text text-6xl ml-36 mt-36 text-wrap font-bold">
         <p className="para w-100%">
           Great Design <br /> come alive with <br />motion
         </p>
-        <button>
+        <button onClick={handleGetStarted} className="font-bold text-xl bg-blue-600 text-white p-2 rounded-xl mt-8">
           Get Started
         </button>
     </div>
-    <div className="animation-train ml-32 w-[55rem]">
+    <div className="animation-train ml-32 pt-20 w-[55rem] h-[55rem]">
       {View}
     </div>
   </div>
-  
+  <div ref={aboutRef}>
+        <About />
+      </div>
   </>
   )
 };
