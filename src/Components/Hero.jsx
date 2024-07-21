@@ -13,12 +13,12 @@ const Move = () => {
   return (
   <>
   <div className="train m-2 p-2 flex justify-between items-center">
-    <div className="home-text text-6xl text-wrap font-bold">
+    <div className="home-text text-6xl ml-8 text-wrap font-bold">
         <p className="para w-100%">
           Great Design <br /> come alive with <br />motion
         </p>
     </div>
-    <div className="animation-train -right-11 w-[55rem] top-[4rem]">
+    <div className="animation-train ml-32 w-[55rem]">
       {View}
     </div>
   </div>
