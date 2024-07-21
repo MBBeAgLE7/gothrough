@@ -12,3 +12,7 @@
 body{
   font-family: Poppins;  
 }
+
+.slick-slide {
+  padding: 0 10px; /* Adjust this value to increase/decrease the gap */
+}
