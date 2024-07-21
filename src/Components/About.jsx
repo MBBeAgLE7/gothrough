@@ -7,11 +7,12 @@ import '../App.css';
 
 const About = () => {
   var settings = {
-    scroll: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
     draggable: true,
     swipe: true,
     touchMove: true,
@@ -72,18 +73,24 @@ const About = () => {
 
   return (
     <div className='w-full'>
-      <h1 className='m-0 p-0 text-5xl text-center w-full h-auto font-medium'>About Us</h1>
-      <div className='text-justify p-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia facilis, eligendi accusamus a enim, quod inventore neque maxime, dolore harum nam. Eos voluptate commodi repellendus nostrum qui quasi voluptas, excepturi consequuntur dolor dicta. Doloremque vero molestias unde.</div>
+      <h1 className='mt-40 p-0 text-5xl text-center w-full h-auto font-medium'>About Us</h1>
+      <div className='text-justify p-10'>
+        <span className='font-bold text-2xl pb-10'>GoThrough,  </span><span>Your ultimate destination for all things related to train travel. Our platform is designed to simplify your journey, offering a comprehensive suite of features that cater to all your travel needs. From searching for trains between specific stations to providing real-time updates on train status and delays, we ensure you have all the information at your fingertips.<br/><br/>
 
+        At TrainFinder, we understand the importance of seamless travel planning. That's why we offer detailed train schedules, connecting trains, and route maps to help you plan your journey with ease. Whether you're looking for booking information, fare calculations, or station facilities, our platform has got you covered.
+<br/>
+<br/>
+        Our mission is to enhance your travel experience by providing accurate, up-to-date information and user-friendly features. With a commitment to excellence, we continuously strive to improve our services and bring you the best in train travel solutions. Join our community of satisfied travelers and discover the convenience of TrainFinder today.</span>
+      </div>
 
-      <div className="carsouel">
+      <div className="carousel">
         <div className="inner m-10 w-auto p-2">
           <Slider {...settings}>
             {features.map((item, index) => (
-              <div className='p-6 rounded-xl bg-yellow-300 border-2 text-center flex flex-col justify-center items-center h-80 w-60 m-auto'>
-                <h3 className='text-xl mb-2'>{item.title}</h3>
-                <div key={index} className='text-center'>
-                  <Player src={item.icon} loop autoplay style={{ height: '150px', width: '150px' }} />
+              <div key={index} className='p-6 rounded-xl border-2 border-black shadow-[10px_0_10px_-10px_black] text-center flex flex-col justify-center items-center h-80 w-auto m-auto'>
+                <h3 className='text-xl font-bold mb-2'>{item.title}</h3>
+                <div className='text-center'>
+                  <Player src={item.icon} loop autoplay style={{ height: '130px', width: '130px' }} />
                 </div>
                 <div className='text-center p-2 text-wrap'>
                   {item.description}
