@@ -17,6 +17,9 @@ const Move = () => {
         <p className="para w-100%">
           Great Design <br /> come alive with <br />motion
         </p>
+        <button>
+          Get Started
+        </button>
     </div>
     <div className="animation-train ml-32 w-[55rem]">
       {View}
