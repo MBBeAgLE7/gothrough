@@ -21,7 +21,9 @@ export default function NavBar() {
 
 
     return (
-        <nav className="w-full bg-white shadow fixed top-0 rounded-lg">
+        
+        <nav className="w-full bg-white shadow fixed top-0 rounded-b-2xl">
+            
             <div ref={menuref} className="justify-around p-2 m-2 lg:flex lg:justify-between lg:items-center  md:flex md:items-center md:justify-between md:p-2">
                 <div>
                     <div className="flex items-center justify-between md:block">
@@ -75,19 +77,19 @@ export default function NavBar() {
                             }`}
                     >
                         <ul className="items-center justify-center space-y-4 md:flex md:space-x-6 md:space-y-0">
-                            <li className="text-gray-600 hover:text-blue-600">
+                            <li className="text-gray-600 font-semibold hover:text-blue-400">
                                 <a href="/">Home</a>
                             </li>
-                            <li className="text-gray-600 hover:text-blue-600">
+                            <li className="text-gray-600 font-semibold hover:text-blue-400">
                                 <a href="/">About Us</a>
                             </li>
-                            <li className="text-gray-600 hover:text-blue-600">
+                            <li className="text-gray-600 font-semibold hover:text-blue-400">
                                 <a href="/">Contact Us</a>
                             </li>
-                            <li className="text-gray-600 hover:text-blue-600">
+                            <li className="text-gray-600 font-semibold hover:text-blue-400">
                                 <a href="/">Sign Up </a>
                             </li>
-                            <li className="text-gray-600 hover:text-blue-600">
+                            <li className="text-gray-600 font-semibold hover:text-blue-400">
                                 <a href="/">Log In </a>
                             </li>
                         </ul>
