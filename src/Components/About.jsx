@@ -93,7 +93,6 @@ const About = () => {
           </Slider>
         </div>
       </div>
-
     </div>
   );
 }
