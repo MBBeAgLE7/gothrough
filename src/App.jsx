@@ -1,7 +1,24 @@
 import './App.css';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
-import About from './Components/About';
+import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://irctc1.p.rapidapi.com/api/v1/searchStation',
+  params: {query: 'BJU'},
+  headers: {
+    'x-rapidapi-key': 'Sign Up for Key',
+    'x-rapidapi-host': 'irctc1.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
 
 
 function App() {
