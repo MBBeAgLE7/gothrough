@@ -5,8 +5,8 @@ import Hero from './Components/Hero';
 import About from './Components/About';
 import Selection from './Components/Selection';
 import Contact from './Components/Contact';
-import axios from 'axios';
 import Footer from './Components/Footer';
+import axios from 'axios';
 
 function App() {
   const [contain , setcontain] = useState([]);
