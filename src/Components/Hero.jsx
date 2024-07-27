@@ -15,7 +15,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="train m-2 p-2 flex justify-between mt-8">
+      <div className="hero train m-2 p-2 flex justify-between mt-8">
         <div className="home-text text-6xl ml-36 mt-36 text-wrap font-bold">
           <p className="para w-100%">
             Great Design <br /> come alive with <br />motion

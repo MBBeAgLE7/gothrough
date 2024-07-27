@@ -3,6 +3,8 @@ import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import About from './Components/About';
 import Selection from './Components/Selection';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
     <Hero/>
     <About/>
     <Selection/>
+    <Contact/>
+    <Footer/>
     </div>
     </>
   );

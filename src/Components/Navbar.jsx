@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-scroll";
 
 export default function NavBar() {
     let menuref = useRef();
@@ -74,14 +75,38 @@ export default function NavBar() {
                 <div>
                     <div className={`flex-1 justify-self-center p-2 md:block md:p-2 ${navbar ? "block" : "hidden"}`}>
                         <ul className="items-center justify-center space-y-4 md:flex md:space-x-6 md:space-y-0">
-                            <li className="text-gray-600 font-semibold hover:text-blue-400">
-                                <a onClick={handleClick} href="/">Home</a>
+                            <li onClick={handleClick} className="text-gray-600 font-semibold hover:text-blue-400">
+                                <Link
+                                    to="hero"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-80}
+                                    duration={800}
+                                >
+                                    Home
+                                </Link>
                             </li>
                             <li onClick={handleClick} className="text-gray-600 font-semibold hover:text-blue-400">
-                                <a href="/">About Us</a>
+                            <Link
+                                    to="about"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-80}
+                                    duration={800}
+                                >
+                                    About Us
+                                </Link>
                             </li>
                             <li onClick={handleClick} className="text-gray-600 font-semibold hover:text-blue-400">
-                                <a href="/">Contact Us</a>                            </li>
+                            <Link
+                                    to="contact"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-80}
+                                    duration={800}
+                                >
+                                    Contact Us
+                                </Link>                        </li>
                             <li onClick={handleClick} className="text-gray-600 font-semibold hover:text-blue-400">
                                 <a href="/">Sign Up</a>
                             </li>
