@@ -24,7 +24,7 @@ export default function NavBar() {
     }
 
     return (
-        <nav className="w-full fixed top-0 bg-white shadow rounded-b-2xl">
+        <nav className="w-full  top-0 bg-white shadow rounded-b-2xl">
             <div ref={menuref} className="justify-around p-2 mt-0 m-2 lg:flex lg:justify-between lg:items-center md:flex md:items-center md:justify-between md:p-2">
                 <div>
                     <div className="flex items-center justify-between md:block">
