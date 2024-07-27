@@ -1,11 +1,11 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Player } from '@lottiefiles/react-lottie-player';
 import '../App.css';
 
-const About =  React.forwardRef((props, ref) => {
+const About = () => {
   var settings = {
     infinite: true,
     speed: 500,
@@ -75,12 +75,12 @@ const About =  React.forwardRef((props, ref) => {
     <div className='w-full'>
       <h1 className='mt-40 p-0 text-5xl text-center w-full h-auto font-medium'>About Us</h1>
       <div className='text-justify p-10'>
-        <span className='font-bold text-2xl pb-10'>GoThrough,  </span><span>Your ultimate destination for all things related to train travel. Our platform is designed to simplify your journey, offering a comprehensive suite of features that cater to all your travel needs. From searching for trains between specific stations to providing real-time updates on train status and delays, we ensure you have all the information at your fingertips.<br/><br/>
+        <span className='font-bold text-2xl pb-10'>GoThrough,  </span><span>Your ultimate destination for all things related to train travel. Our platform is designed to simplify your journey, offering a comprehensive suite of features that cater to all your travel needs. From searching for trains between specific stations to providing real-time updates on train status and delays, we ensure you have all the information at your fingertips.<br /><br />
 
-        At TrainFinder, we understand the importance of seamless travel planning. That's why we offer detailed train schedules, connecting trains, and route maps to help you plan your journey with ease. Whether you're looking for booking information, fare calculations, or station facilities, our platform has got you covered.
-<br/>
-<br/>
-        Our mission is to enhance your travel experience by providing accurate, up-to-date information and user-friendly features. With a commitment to excellence, we continuously strive to improve our services and bring you the best in train travel solutions. Join our community of satisfied travelers and discover the convenience of TrainFinder today.</span>
+          At TrainFinder, we understand the importance of seamless travel planning. That's why we offer detailed train schedules, connecting trains, and route maps to help you plan your journey with ease. Whether you're looking for booking information, fare calculations, or station facilities, our platform has got you covered.
+          <br />
+          <br />
+          Our mission is to enhance your travel experience by providing accurate, up-to-date information and user-friendly features. With a commitment to excellence, we continuously strive to improve our services and bring you the best in train travel solutions. Join our community of satisfied travelers and discover the convenience of TrainFinder today.</span>
       </div>
 
       <div className="carousel">
@@ -101,7 +101,8 @@ const About =  React.forwardRef((props, ref) => {
         </div>
       </div>
     </div>
-  );
-})
+  )
+};
+
 
 export default About;

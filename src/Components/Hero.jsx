@@ -1,7 +1,7 @@
 import React, {useRef} from "react";
 import { useLottie } from "lottie-react";
 import groovyWalkAnimation from "./groovyWalk.json";
-import About from "./About";
+import { Link } from "react-scroll";
 
 const Move = () => {
   const aboutRef = useRef(null)
@@ -13,9 +13,7 @@ const Move = () => {
   const { View } = useLottie(options);
 
   const handleGetStarted = () => {
-    if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+
   }
   
 
@@ -34,9 +32,6 @@ const Move = () => {
       {View}
     </div>
   </div>
-  <div ref={aboutRef}>
-        <About />
-      </div>
   </>
   )
 };
