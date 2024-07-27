@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import About from './Components/About';
+import Card from './Components/Card';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Hero/>
     </div>
     <Navbar/>
+    <Card/>
     </>
   );
 }
