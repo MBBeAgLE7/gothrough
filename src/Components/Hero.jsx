@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useLottie } from "lottie-react";
 import groovyWalkAnimation from "./groovyWalk.json";
-import About from "./About";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const options = {
@@ -20,7 +20,7 @@ const Hero = () => {
           <p className="para w-100%">
             Great Design <br /> come alive with <br />motion
           </p>
-          <button className="font-bold text-xl bg-blue-600 text-white p-2 rounded-xl mt-8">
+          <button className="font-bold text-xl bg-blue-600 text-white p-3 rounded-xl mt-8">
             <Link
               to="about"
               spy={true}
