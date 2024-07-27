@@ -9,28 +9,23 @@ import Footer from './Components/Footer';
 import axios from 'axios';
 
 function App() {
-  const [contain, setContain] = useState([]);
+  const [contain , setcontain] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`https://real-time-pnr-status-api-for-indian-railways.p.rapidapi.com/name/${8119853741}`, {
-          method: 'GET',
-          headers: {
-            'x-rapidapi-key': '03a6fc1c64msh9ca81b434e634bfp123553jsnd3933bc0fec7',
-            'x-rapidapi-host': 'real-time-pnr-status-api-for-indian-railways.p.rapidapi.com'
-          }
-        });
-        const data = await response.json();
-        setContain(data);
-        console.log(data);
-      } catch (err) {
-        console.error(err);
-      }
-    };
+  
 
-    fetchData();
-  }, []);
+  fetch('https://irctc1.p.rapidapi.com/api/v1/searchStation?query=BJU', {
+    method: 'GET',
+    headers: {
+      'x-rapidapi-key': '03a6fc1c64msh9ca81b434e634bfp123553jsnd3933bc0fec7',
+      'x-rapidapi-host': 'irctc1.p.rapidapi.com'
+    }
+  })
+  .then(response => {
+    console.log(response.json());
+  })
+  .catch(err => {
+    console.error(err);
+  })
 
   return (
     <>
