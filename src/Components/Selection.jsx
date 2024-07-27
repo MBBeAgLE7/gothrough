@@ -15,8 +15,9 @@ const Selection = () => {
       <div className='m-10'>
         <input 
           placeholder='Enter the station name' 
-          className='bg-white relative pl-1 p-10' 
+          className='bg-white relative pl-1 p-10'
           onChange={onchangestnName}
+          value={stnName}
         />
       </div>
     </>
