@@ -1,21 +1,106 @@
-.cardouter{
-
+.cardouter {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;    
-
+    height: 50vh;
 }
 
-.card{
+.card {
+    width: 94%;
+    height: 300px;
+    gap: 20px;
+    background-color: rgb(181, 241, 245);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+.card button {
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.btnactive {
+    color: rgb(25, 99, 238) !important;
+    border: 2px solid rgb(25, 99, 238) !important;
+}
+
+.model {
+    margin: 20px 0px;
     display: flex;
+    justify-content: space-between;
+}
+
+.mdlShaddow {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    padding: 10px;
+}
+
+.mdlShaddow div {
+    display: flex;
+    /* border: 1px solid red; */
+    background-color: rgb(119, 203, 209);
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 200px;
+    flex-basis: 23%;
+    margin: 0.5%;
+    box-shadow: 0 2px 5px 0 rgba(127, 124, 124, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-    background-color: black;
+.mdlShaddow div p {
+    font-weight: 500;
+    font-size: 30px;
+    color: rgb(58, 103, 103);
+    transition: transform 0.5s ease;
+}
+
+.scaleinp {
+    display: block !important;
+    border-bottom: 5px solid blue !important;
+    border-bottom-left-radius: 20px;
+}
+
+.scaleinp p {
+    transform: scale(0.7) translate(-15%, -10%);
+    font-size: 25px !important;
+}
+
+.scaleinp input {
+    margin-left: 5px;
+    height: 40%;
+    width: 85%;
+    background-color: rgb(119, 203, 209); /* Change this to your desired background color */
+    /* color: #00796b; Change this to your desired text color */
+    /* border: none; Remove border */
+    outline: none; 
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search{
+
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: rgb(182, 94, 94);
+    border-radius: 0px !important;
+    color: white;
+
 
 }
+
+.search:hover {
+    background-color: rgb(128, 33, 33);
+    color: azure;
+}
+
