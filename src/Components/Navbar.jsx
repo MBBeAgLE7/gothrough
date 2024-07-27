@@ -18,6 +18,10 @@ export default function NavBar() {
         };
     }, []);
 
+    let handleClick = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <nav className="w-full fixed top-0 bg-white shadow rounded-b-2xl">
             <div ref={menuref} className="justify-around p-2 mt-0 m-2 lg:flex lg:justify-between lg:items-center md:flex md:items-center md:justify-between md:p-2">
@@ -71,18 +75,17 @@ export default function NavBar() {
                     <div className={`flex-1 justify-self-center p-2 md:block md:p-2 ${navbar ? "block" : "hidden"}`}>
                         <ul className="items-center justify-center space-y-4 md:flex md:space-x-6 md:space-y-0">
                             <li className="text-gray-600 font-semibold hover:text-blue-400">
-                                <a href="/">Home</a>
+                                <a onClick={handleClick} href="/">Home</a>
                             </li>
-                            <li className="text-gray-600 font-semibold hover:text-blue-400">
+                            <li onClick={handleClick} className="text-gray-600 font-semibold hover:text-blue-400">
                                 <a href="/">About Us</a>
                             </li>
-                            <li className="text-gray-600 font-semibold hover:text-blue-400">
-                                <a href="/">Contact Us</a>
-                            </li>
-                            <li className="text-gray-600 font-semibold hover:text-blue-400">
+                            <li onClick={handleClick} className="text-gray-600 font-semibold hover:text-blue-400">
+                                <a href="/">Contact Us</a>                            </li>
+                            <li onClick={handleClick} className="text-gray-600 font-semibold hover:text-blue-400">
                                 <a href="/">Sign Up</a>
                             </li>
-                            <li className="text-gray-600 font-semibold hover:text-blue-400">
+                            <li onClick={handleClick} className="text-gray-600 font-semibold hover:text-blue-400">
                                 <a href="/">Log In</a>
                             </li>
                         </ul>
