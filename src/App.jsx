@@ -9,8 +9,9 @@ import axios from 'axios';
 import Footer from './Components/Footer';
 
 function App() {
-  const [stnName, setstnName] = useState('');
   const [contain , setcontain] = useState([]);
+
+  
 
   fetch('https://irctc1.p.rapidapi.com/api/v1/searchStation?query=BJU', {
     method: 'GET',
