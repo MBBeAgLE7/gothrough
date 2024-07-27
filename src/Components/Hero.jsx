@@ -1,39 +1,37 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import { useLottie } from "lottie-react";
 import groovyWalkAnimation from "./groovyWalk.json";
-import { Link } from "react-scroll";
+import About from "./About";
 
 const Move = () => {
-  const aboutRef = useRef(null)
+  const aboutRef = useRef(null);
   const options = {
     animationData: groovyWalkAnimation,
-    loop: true
+    loop: true,
   };
 
   const { View } = useLottie(options);
-
-  const handleGetStarted = () => {
-
-  }
-  
-
   return (
-  <>
-  <div className="train m-2 p-2 flex justify-between mt-8">
-    <div className="home-text text-6xl ml-36 mt-36 text-wrap font-bold">
-        <p className="para w-100%">
-          Great Design <br /> come alive with <br />motion
-        </p>
-        <button onClick={handleGetStarted} className="font-bold text-xl bg-blue-600 text-white p-2 rounded-xl mt-8">
-          Get Started
-        </button>
-    </div>
-    <div className="animation-train ml-32 pt-20 w-[55rem] h-[55rem]">
-      {View}
-    </div>
-  </div>
-  </>
-  )
+    <>
+      <div className="train m-2 p-2 flex justify-between mt-8">
+        <div className="home-text text-6xl ml-36 mt-36 text-wrap font-bold">
+          <p className="para w-100%">
+            Great Design <br /> come alive with <br />motion
+          </p>
+          <button
+            onClick={handleGetStarted}
+            className="font-bold text-xl bg-blue-600 text-white p-3 rounded-xl mt-8"
+          >
+            Get Started
+          </button>
+        </div>
+        <div className="animation-train ml-32 pt-20 w-[55rem] h-[55rem]">
+          {View}
+        </div>
+      </div>
+      <div className="h-screen bg-gray-200">Placeholder Content Above About</div> {/* Add a placeholder */}
+    </>
+  );
 };
 
 export default Move;
