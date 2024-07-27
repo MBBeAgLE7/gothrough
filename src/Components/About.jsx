@@ -73,7 +73,7 @@ const About = () => {
 
   return (
     <div className='about w-full'>
-      <h1 className='mt-20 p-0 text-5xl text-center w-full h-auto font-medium'>About Us</h1>
+      <h1 className=' p-0 text-5xl text-center w-full h-auto font-medium'>About Us</h1>
       <div className='text-justify p-10'>
         <span className='font-bold text-2xl pb-10'>GoThrough,  </span><span>Your ultimate destination for all things related to train travel. Our platform is designed to simplify your journey, offering a comprehensive suite of features that cater to all your travel needs. From searching for trains between specific stations to providing real-time updates on train status and delays, we ensure you have all the information at your fingertips.<br /><br />
 
