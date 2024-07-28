@@ -20,18 +20,19 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       if (train.length === 5) {
-        const url = 'https://trainjourney-irctc-api.p.rapidapi.com/api/train/trainv2?Disclaimer=This%20train%20running%20information%20is%20not%20affiliated%20with%20or%20endorsed%20by%20Indian%20Railways%20or%20IRCTC.&date=07032024&apikey=5eb5f408&search=12814';
+        const url = `https://indian-railway-irctc.p.rapidapi.com/api/trains-search/v1/train/${train}?isH5=true&client=web`;
         const options = {
           method: 'GET',
           headers: {
-            'x-rapidapi-key': '03a6fc1c64msh9ca81b434e634bfp123553jsnd3933bc0fec7',
-            'x-rapidapi-host': 'trainjourney-irctc-api.p.rapidapi.com'
+            'x-rapidapi-key': '9e86176efbmshb1604eee4f21f79p1a944ejsnacf68937b258',
+            'x-rapidapi-host': 'indian-railway-irctc.p.rapidapi.com',
+            'x-rapid-api': 'rapid-api-database'
           }
         };
 
         try {
           const response = await fetch(url, options);
-          const result = await response.text();
+          const result = await response.json();
           console.log(result);
         } catch (error) {
           console.error(error);
@@ -51,8 +52,8 @@ function App() {
         <Selection />
         <Card />
         <input
-          className="m-10 p-3"
-          placeholder="Enter The Name Here"
+          className="m-10 p-3 w-64"
+          placeholder="Enter The train Number Here"
           onChange={onChangeTrain}
           value={train}
         ></input>
